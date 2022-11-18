@@ -1,5 +1,7 @@
 # ProceduralPlanetGodot
-A procedurally generated planet created in Godot 4, based on Sebastian Lague's procedural planet for Unity.
+A procedurally generated planet created in Godot 4, based on Sebastian Lague's procedural planet for Unity:
+
+https://github.com/SebLague/Solar-System
 
 Watch the youtube video here:
 
