@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://5d7kjm4autru"
+path="res://.godot/imported/EarthHeight.glsl-366a6af182ce3043f690b115ca09c6f7.res"
+
+[deps]
+
+source_file="res://materials/shaders/compute/EarthHeight.glsl"
+dest_files=["res://.godot/imported/EarthHeight.glsl-366a6af182ce3043f690b115ca09c6f7.res"]
+
+[params]
+

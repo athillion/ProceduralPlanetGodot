@@ -1,0 +1,35 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bph6ps5662eek"]
+
+[ext_resource type="Shader" path="res://materials/shaders/Ocean.gdshader" id="1_ugicx"]
+[ext_resource type="Texture2D" uid="uid://da3majtofq8xo" path="res://materials/textures/Wave A.png" id="2_0oh43"]
+[ext_resource type="Texture2D" uid="uid://bc8jt35p7okp2" path="res://materials/textures/water_foam.png" id="2_kijgd"]
+[ext_resource type="Texture2D" uid="uid://8bljs0ddcdvu" path="res://materials/textures/Wave B.png" id="3_dux5e"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ugicx")
+shader_parameter/AlphaMultiplier = 70.0
+shader_parameter/CausticsTex = ExtResource("2_kijgd")
+shader_parameter/ColA = Color(0, 0, 0.776471, 1)
+shader_parameter/ColB = Color(0, 0.564706, 0.670588, 1)
+shader_parameter/DepthMultiplier = 10.0
+shader_parameter/DirToSun = null
+shader_parameter/FoamColor = null
+shader_parameter/FoamEdgeFalloffBias = null
+shader_parameter/FoamFalloffDistance = null
+shader_parameter/FoamLeadingEdgeFalloff = null
+shader_parameter/FoamNoiseScale = null
+shader_parameter/FoamNoiseTexture = ExtResource("2_kijgd")
+shader_parameter/OceanCentre = null
+shader_parameter/OceanRadius = 200.0
+shader_parameter/PlanetScale = null
+shader_parameter/ShoreWaveHeight = null
+shader_parameter/Smoothness = 0.92
+shader_parameter/SpecularCol = Color(0.603922, 1, 1, 1)
+shader_parameter/SpecularIntensity = null
+shader_parameter/WaveNormalA = ExtResource("2_0oh43")
+shader_parameter/WaveNormalB = ExtResource("3_dux5e")
+shader_parameter/WaveNormalScale = 15.0
+shader_parameter/WaveSpeed = 0.5
+shader_parameter/WaveStrength = 0.15
+shader_parameter/ZNear = null

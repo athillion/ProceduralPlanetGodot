@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://i5cpeh8euerh"]
+
+[sub_resource type="SystemFont" id="SystemFont_f8qu8"]
+
+[resource]
+default_font = SubResource("SystemFont_f8qu8")
+default_font_size = 0

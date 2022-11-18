@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://63bhno6dyxv0"]
+
+[sub_resource type="Shader" id="15"]
+code = "shader_type spatial;
+
+uniform float min_height;
+uniform float max_height;
+uniform sampler2D height_color;
+
+varying float height;
+
+void fragment() {
+	float t = height / (max_height-min_height) - (min_height / (max_height-min_height));
+	vec3 color = texture(height_color, vec2(t, UV.y)).rgb;
+	ALBEDO = vec3(color);
+}
+
+void vertex() {
+	height = length(VERTEX);
+}"
+
+[sub_resource type="ImageTexture" id="ImageTexture_dap1k"]
+
+[resource]
+render_priority = 0
+shader = SubResource("15")
+shader_parameter/height_color = SubResource("ImageTexture_dap1k")
+shader_parameter/max_height = 200.0
+shader_parameter/min_height = 200.0

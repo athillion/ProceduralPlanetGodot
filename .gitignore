@@ -1,9 +1,11 @@
 
 # Godot-specific ignores
+*.import
 .import/
 export.cfg
 export_presets.cfg
 
 # Mono-specific ignores
+*.mono
 .mono/
 data_*/

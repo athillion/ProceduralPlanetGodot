@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/planet/settings/ResolutionSettings.gd" id="1_cdhpv"]
+
+[resource]
+resource_name = "Resolution Settings"
+script = ExtResource("1_cdhpv")
+num_LOD_levels = 3
+lod0 = 300
+lod1 = 100
+lod2 = 50
+collider = 100

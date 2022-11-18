@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/ShakeEffect.gd" id="1_o6skj"]
+
+[node name="ShakeEffect" type="Node"]
+script = ExtResource("1_o6skj")
+amount = Vector3(1, 1, 0)
+speed = 30.0

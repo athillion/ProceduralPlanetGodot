@@ -1,0 +1,64 @@
+[gd_resource type="Resource" load_steps=11 format=3 uid="uid://c7kr5gdkvgcb"]
+
+[ext_resource type="Script" path="res://scripts/planet/settings/noise_settings/SimplexNoiseSettings.gd" id="1_5xb5q"]
+[ext_resource type="Script" path="res://scripts/planet/shape/modules/EarthHeightModule.gd" id="1_foy8k"]
+[ext_resource type="Script" path="res://scripts/planet/settings/noise_settings/RidgeNoiseSettings.gd" id="2_0nuac"]
+[ext_resource type="Script" path="res://scripts/planet/shape/modules/PerturbPointsModule.gd" id="2_qfkpy"]
+[ext_resource type="Script" path="res://scripts/planet/shape/CelestialBodyShape.gd" id="3_u4qxu"]
+
+[sub_resource type="Resource" id="Resource_cs1vh"]
+script = ExtResource("1_5xb5q")
+num_layers = 5
+lacunarity = 2.0
+persistence = 0.5
+scale = 1.0
+elevation = 2.64
+vertical_shift = -0.63
+offset = Vector3(0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_3gob8"]
+script = ExtResource("1_5xb5q")
+num_layers = 3
+lacunarity = 1.66
+persistence = 0.55
+scale = 1.09
+elevation = 1.0
+vertical_shift = 0.02
+offset = Vector3(0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_f7se2"]
+script = ExtResource("2_0nuac")
+num_layers = 5
+lacunarity = 4.0
+persistence = 0.5
+scale = 1.5
+power = 2.18
+elevation = 8.7
+gain = 0.8
+vertical_shift = 0.09
+peak_smoothing = 1.0
+offset = Vector3(0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_0ol4x"]
+resource_name = "Height Module"
+script = ExtResource("1_foy8k")
+continents_noise = SubResource("Resource_cs1vh")
+mountains_noise = SubResource("Resource_f7se2")
+mask_noise = SubResource("Resource_3gob8")
+ocean_depth_multiplier = 5.0
+ocean_floor_depth = 1.36
+ocean_floor_smoothing = 0.5
+mountain_blend = 1.16
+
+[sub_resource type="Resource" id="Resource_7g0qi"]
+resource_name = "Perturb Module"
+script = ExtResource("2_qfkpy")
+
+[resource]
+script = ExtResource("3_u4qxu")
+randomize_ = false
+seed_ = 0
+height_map_compute = SubResource("Resource_0ol4x")
+perturb_vertices = true
+perturb_compute = SubResource("Resource_7g0qi")
+perturb_strength = 0.698

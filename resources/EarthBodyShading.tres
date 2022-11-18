@@ -1,0 +1,95 @@
+[gd_resource type="Resource" load_steps=15 format=3 uid="uid://bwamv2xe41otf"]
+
+[ext_resource type="Resource" uid="uid://ctd28v4t7vm2l" path="res://resources/EarthAtmosphereSettings.tres" id="1_fitxj"]
+[ext_resource type="Script" path="res://scripts/planet/shading/colors/EarthColors.gd" id="1_q4po3"]
+[ext_resource type="Resource" uid="uid://c81covgcp35k5" path="res://resources/EarthOceanSettings.tres" id="2_l7bfv"]
+[ext_resource type="Script" path="res://scripts/planet/shading/EarthShading.gd" id="3_qx3so"]
+[ext_resource type="Script" path="res://scripts/planet/shading/modules/EarthShadingModule.gd" id="4_vatc7"]
+[ext_resource type="Material" uid="uid://g31nb23b03kn" path="res://materials/Earth.tres" id="5_conq4"]
+[ext_resource type="Script" path="res://scripts/planet/settings/noise_settings/SimplexNoiseSettings.gd" id="5_j403m"]
+
+[sub_resource type="Resource" id="Resource_yynq6"]
+resource_name = "Customized Colors"
+script = ExtResource("1_q4po3")
+shore_color_low = Color(0.980392, 1, 0.666667, 1)
+shore_color_high = Color(0.952941, 0.85098, 0.380392, 1)
+flat_color_low_A = Color(0.788235, 0.858824, 0, 1)
+flat_color_high_A = Color(0.192157, 0.462745, 0, 1)
+flat_color_low_B = Color(0.584314, 1, 0, 1)
+flat_color_high_B = Color(0.192157, 0.462745, 0, 1)
+steep_low = Color(0.529412, 0.490196, 0.188235, 1)
+steep_high = Color(0.14902, 0.0666667, 0, 1)
+
+[sub_resource type="Resource" id="Resource_7xf64"]
+resource_name = "Randomized Colors"
+script = ExtResource("1_q4po3")
+shore_color_low = Color(0, 0, 0, 1)
+shore_color_high = Color(0, 0, 0, 1)
+flat_color_low_A = Color(0, 0, 0, 1)
+flat_color_high_A = Color(0, 0, 0, 1)
+flat_color_low_B = Color(0, 0, 0, 1)
+flat_color_high_B = Color(0, 0, 0, 1)
+steep_low = Color(0, 0, 0, 1)
+steep_high = Color(0, 0, 0, 1)
+
+[sub_resource type="Resource" id="Resource_hwu13"]
+script = ExtResource("5_j403m")
+num_layers = 4
+lacunarity = 2.0
+persistence = 0.5
+scale = 1.5
+elevation = 1.0
+vertical_shift = 0.0
+offset = Vector3(0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_dgxup"]
+script = ExtResource("5_j403m")
+num_layers = 4
+lacunarity = 2.0
+persistence = 0.5
+scale = 2.96
+elevation = 9.41
+vertical_shift = 0.0
+offset = Vector3(0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_dgfso"]
+script = ExtResource("5_j403m")
+num_layers = 4
+lacunarity = 2.0
+persistence = 0.5
+scale = 1.77
+elevation = 1.0
+vertical_shift = 0.0
+offset = Vector3(0, 0, 0)
+
+[sub_resource type="Resource" id="Resource_dgb8b"]
+script = ExtResource("5_j403m")
+num_layers = 5
+lacunarity = 4.13
+persistence = 0.65
+scale = 4.44
+elevation = 0.52
+vertical_shift = 0.0
+offset = Vector3(0.25, -0.09, 0)
+
+[sub_resource type="Resource" id="Resource_q1mmt"]
+resource_name = "Shading Data Compute Shader"
+script = ExtResource("4_vatc7")
+detail_warp_noise = SubResource("Resource_dgxup")
+detail_noise = SubResource("Resource_hwu13")
+large_noise = SubResource("Resource_dgfso")
+small_noise = SubResource("Resource_dgb8b")
+
+[resource]
+script = ExtResource("3_qx3so")
+customized_colors = SubResource("Resource_yynq6")
+randomized_colors = SubResource("Resource_7xf64")
+randomize_ = false
+seed_ = 0
+terrain_material = ExtResource("5_conq4")
+has_ocean = true
+ocean_level = 1.0
+ocean_settings = ExtResource("2_l7bfv")
+has_atmosphere = true
+atmosphere_settings = ExtResource("1_fitxj")
+shading_data_compute = SubResource("Resource_q1mmt")

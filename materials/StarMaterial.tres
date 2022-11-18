@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://yy6s3fbny8fu"]
+
+[ext_resource type="Shader" path="res://materials/shaders/Star.gdshader" id="1_aimqo"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nifam"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_0ktvw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_aimqo")
+shader_parameter/MainTex = SubResource("ViewportTexture_nifam")
+shader_parameter/Spectrum = SubResource("ImageTexture_0ktvw")
+shader_parameter/daytimeFade = 4.0

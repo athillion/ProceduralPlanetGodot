@@ -1,0 +1,31 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://c81covgcp35k5"]
+
+[ext_resource type="Script" path="res://scripts/planet/settings/OceanSettings.gd" id="1_561w0"]
+[ext_resource type="Texture2D" uid="uid://bc8jt35p7okp2" path="res://materials/textures/water_foam.png" id="1_a2wmy"]
+[ext_resource type="Texture2D" uid="uid://8bljs0ddcdvu" path="res://materials/textures/Wave B.png" id="3_iaedc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ex8b4"]
+
+[resource]
+resource_name = "Ocean Settings"
+script = ExtResource("1_561w0")
+depth_multiplier = 30.0
+alpha_multiplier = 50.0
+colA = Color(0, 0, 0.776471, 1)
+colB = Color(0, 0.564706, 0.670588, 1)
+specular_col = Color(0.603922, 1, 1, 1)
+wave_normal_A = SubResource("CompressedTexture2D_ex8b4")
+wave_normal_B = ExtResource("3_iaedc")
+wave_strength = 0.704
+wave_scale = 5.0
+wave_speed = 0.1
+shore_wave_height = 0.1
+smoothness = 0.961
+specular_intensity = 0.5
+foam_noise_texture = ExtResource("1_a2wmy")
+foam_color = Color(1, 1, 1, 1)
+foam_noise_scale = 0.5
+foam_falloff_distance = 1.0
+foam_leading_edge_falloff = 0.5
+foam_edge_falloff_bias = 0.6
+refraction_scale = 1.0
