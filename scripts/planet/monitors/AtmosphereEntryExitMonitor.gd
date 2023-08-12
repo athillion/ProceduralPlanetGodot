@@ -24,7 +24,7 @@ func _ready():
 		planet.body_scale() + 1.3 * (atmosphere_radius - planet.body_scale())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	var intersecting_areas : Array[Area3D] = []
 	var overlapping_areas_inner = atmosphere_inner.get_overlapping_areas()
 	var overlapping_areas_outer = atmosphere_outer.get_overlapping_areas()

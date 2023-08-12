@@ -121,7 +121,7 @@ func generate_mesh():
 	
 	rng.set_seed(seed_)
 	for i in range(num_stars):
-		var dir : Vector3 = rand_on_unit_sphere(rng)
+		var dir : Vector3 = rand_on_unit_sphere()
 		var cluster_noise : float = \
 			stars_clustering_amplitude * stars_clustering_noise.get_noise_3dv(dir)
 		dir += Vector3.ONE * cluster_noise
@@ -187,7 +187,7 @@ func generate_circle(dir : Vector3, index_offset : int) -> Array:
 	
 	return array;
 
-func rand_on_unit_sphere(rng) -> Vector3:
+func rand_on_unit_sphere() -> Vector3:
 	var x : float = rng.randf_range(-1.0, 1.0)
 	var y : float = rng.randf_range(-1.0, 1.0)
 	var z : float = rng.randf_range(-1.0, 1.0)
