@@ -20,7 +20,7 @@ enum PreviewMode {LOD0, LOD1, LOD2, CollisionRes}
 		preview_mode = val
 		on_shape_data_changed()
 
-@export_node_path(Camera3D) var camera_path
+@export_node_path("Camera3D") var camera_path
 @onready var camera : Camera3D = get_node(camera_path)
 
 @export var body : Resource :

@@ -11,21 +11,21 @@ class_name PlanetEffects
 
 # Post processing effects are ShaderMaterials slapped onto billboard quads and 
 # pressed against your face
-@export_node_path(MeshInstance3D) var ocean_target_mesh_path
-@export_node_path(MeshInstance3D) var atmosphere_target_mesh_path
+@export_node_path("MeshInstance3D") var ocean_target_mesh_path
+@export_node_path("MeshInstance3D") var atmosphere_target_mesh_path
 
 @onready var ocean_target_mesh : MeshInstance3D = get_node(ocean_target_mesh_path)
 @onready var atmosphere_target_mesh : MeshInstance3D = get_node(atmosphere_target_mesh_path)
 
 # A node which has a light source as a child
-@export_node_path(Node3D) var light_path
+@export_node_path("Node3D") var light_path
 # A node that is of type CelestialBodyGenerator
-@export_node_path(Node3D) var generator_path
+@export_node_path("Node3D") var generator_path
 
 # We use viewports as a workaround for Godot's lack of multi pass post processing
-@export_node_path(Viewport) var source_viewport_path
-@export_node_path(Viewport) var ocean_viewport_path
-@export_node_path(Viewport) var atmosphere_viewport_path
+@export_node_path("Viewport") var source_viewport_path
+@export_node_path("Viewport") var ocean_viewport_path
+@export_node_path("Viewport") var atmosphere_viewport_path
 
 @onready var source_viewport : SubViewport = get_node(source_viewport_path)
 @onready var ocean_viewport : SubViewport = get_node(ocean_viewport_path)

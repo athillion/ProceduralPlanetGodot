@@ -2,7 +2,7 @@ extends Node3D
 
 class_name AtmosphereEntryExitMonitor
 
-@export_node_path(Node3D) var planet_path
+@export_node_path("Node3D") var planet_path
 
 @export var shake_strength : float = 40.0
 

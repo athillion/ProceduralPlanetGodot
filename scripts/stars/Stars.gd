@@ -71,8 +71,8 @@ class_name Stars
 		stars_clustering_amplitude = val
 		on_data_updated()
 
-@export_node_path(Node3D) var generator_path
-@export_node_path(Viewport) var source_viewport_path
+@export_node_path("Node3D") var generator_path
+@export_node_path("Viewport") var source_viewport_path
 
 @onready var generator : CelestialBodyGenerator = get_node(generator_path)
 @onready var source_viewport : Viewport = get_node(source_viewport_path)
