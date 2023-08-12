@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=6 format=3 uid="uid://bkya0h53ioxlq"]
+[gd_resource type="Resource" script_class="ResolutionSettings" load_steps=6 format=3 uid="uid://bkya0h53ioxlq"]
 
 [ext_resource type="Script" path="res://scripts/planet/settings/LODParameter.gd" id="1_7eav4"]
 [ext_resource type="Script" path="res://scripts/planet/settings/ResolutionSettings.gd" id="2_y8e2n"]
@@ -21,5 +21,5 @@ min_distance = inf
 [resource]
 resource_name = "Resolution Settings"
 script = ExtResource("2_y8e2n")
-lod_parameters = [SubResource("Resource_ocn15"), SubResource("Resource_sed1n"), SubResource("Resource_jqhrx")]
+lod_parameters = Array[ExtResource("1_7eav4")]([SubResource("Resource_ocn15"), SubResource("Resource_sed1n"), SubResource("Resource_jqhrx")])
 collider = 100

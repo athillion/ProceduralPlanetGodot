@@ -1,18 +1,31 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=13 format=3 uid="uid://ctdg6los4isfb"]
 
 [ext_resource type="Script" path="res://scripts/planet/CelestialBodyGenerator.gd" id="1_qheu2"]
 [ext_resource type="Script" path="res://scripts/planet/settings/ResolutionSettings.gd" id="2_dcqbo"]
+[ext_resource type="Script" path="res://scripts/planet/settings/LODParameter.gd" id="2_rux8e"]
 [ext_resource type="Script" path="res://scripts/planet/CelestialBodySettings.gd" id="3_hro1c"]
-[ext_resource type="Resource" path="res://resources/EarthBodyShading.tres" id="4_j41v4"]
-[ext_resource type="Resource" path="res://resources/EarthBodyShape.tres" id="5_lyba7"]
+[ext_resource type="Resource" uid="uid://bwamv2xe41otf" path="res://resources/EarthBodyShading.tres" id="4_j41v4"]
+[ext_resource type="Resource" uid="uid://c7kr5gdkvgcb" path="res://resources/EarthBodyShape.tres" id="5_lyba7"]
+
+[sub_resource type="Resource" id="Resource_dvwkr"]
+script = ExtResource("2_rux8e")
+resolution = 300
+min_distance = 300.0
+
+[sub_resource type="Resource" id="Resource_ndk7e"]
+script = ExtResource("2_rux8e")
+resolution = 100
+min_distance = 1000.0
+
+[sub_resource type="Resource" id="Resource_okv17"]
+script = ExtResource("2_rux8e")
+resolution = 50
+min_distance = inf
 
 [sub_resource type="Resource" id="Resource_631tr"]
 resource_name = "Resolution Settings"
 script = ExtResource("2_dcqbo")
-num_LOD_levels = 3
-lod0 = 300
-lod1 = 100
-lod2 = 50
+lod_parameters = Array[ExtResource("2_rux8e")]([SubResource("Resource_dvwkr"), SubResource("Resource_ndk7e"), SubResource("Resource_okv17")])
 collider = 100
 
 [sub_resource type="Resource" id="Resource_iid5i"]

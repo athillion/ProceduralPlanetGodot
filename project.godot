@@ -8,171 +8,11 @@
 
 config_version=5
 
-_global_script_classes=[{
-"base": "Node",
-"class": &"AtmosphereEffect",
-"language": &"GDScript",
-"path": "res://scripts/effects/post_processing/AtmosphereEffect.gd"
-}, {
-"base": "Node3D",
-"class": &"AtmosphereEntryExitMonitor",
-"language": &"GDScript",
-"path": "res://scripts/planet/monitors/AtmosphereEntryExitMonitor.gd"
-}, {
-"base": "Resource",
-"class": &"AtmosphereSettings",
-"language": &"GDScript",
-"path": "res://scripts/planet/settings/AtmosphereSettings.gd"
-}, {
-"base": "Node3D",
-"class": &"CelestialBodyGenerator",
-"language": &"GDScript",
-"path": "res://scripts/planet/CelestialBodyGenerator.gd"
-}, {
-"base": "Resource",
-"class": &"CelestialBodySettings",
-"language": &"GDScript",
-"path": "res://scripts/planet/CelestialBodySettings.gd"
-}, {
-"base": "Resource",
-"class": &"CelestialBodyShading",
-"language": &"GDScript",
-"path": "res://scripts/planet/shading/CelestialBodyShading.gd"
-}, {
-"base": "Resource",
-"class": &"CelestialBodyShape",
-"language": &"GDScript",
-"path": "res://scripts/planet/shape/CelestialBodyShape.gd"
-}, {
-"base": "Resource",
-"class": &"EarthColors",
-"language": &"GDScript",
-"path": "res://scripts/planet/shading/colors/EarthColors.gd"
-}, {
-"base": "HeightModule",
-"class": &"EarthHeightModule",
-"language": &"GDScript",
-"path": "res://scripts/planet/shape/modules/EarthHeightModule.gd"
-}, {
-"base": "CelestialBodyShading",
-"class": &"EarthShading",
-"language": &"GDScript",
-"path": "res://scripts/planet/shading/EarthShading.gd"
-}, {
-"base": "ShadingDataModule",
-"class": &"EarthShadingModule",
-"language": &"GDScript",
-"path": "res://scripts/planet/shading/modules/EarthShadingModule.gd"
-}, {
-"base": "Resource",
-"class": &"HeightModule",
-"language": &"GDScript",
-"path": "res://scripts/planet/shape/modules/HeightModule.gd"
-}, {
-"base": "Resource",
-"class": &"LODParameter",
-"language": &"GDScript",
-"path": "res://scripts/planet/settings/LODParameter.gd"
-}, {
-"base": "Node",
-"class": &"OceanEffect",
-"language": &"GDScript",
-"path": "res://scripts/effects/post_processing/OceanEffect.gd"
-}, {
-"base": "Resource",
-"class": &"OceanSettings",
-"language": &"GDScript",
-"path": "res://scripts/planet/settings/OceanSettings.gd"
-}, {
-"base": "Resource",
-"class": &"PerturbModule",
-"language": &"GDScript",
-"path": "res://scripts/planet/shape/modules/PerturbModule.gd"
-}, {
-"base": "PerturbModule",
-"class": &"PerturbPointsModule",
-"language": &"GDScript",
-"path": "res://scripts/planet/shape/modules/PerturbPointsModule.gd"
-}, {
-"base": "Node",
-"class": &"PlanetEffectHolder",
-"language": &"GDScript",
-"path": "res://scripts/effects/post_processing/PlanetEffectHolder.gd"
-}, {
-"base": "Node",
-"class": &"PlanetEffects",
-"language": &"GDScript",
-"path": "res://scripts/effects/post_processing/PlanetEffects.gd"
-}, {
-"base": "Resource",
-"class": &"PlanetSphereMesh",
-"language": &"GDScript",
-"path": "res://scripts/planet/shape/mesh/PlanetSphereMesh.gd"
-}, {
-"base": "Resource",
-"class": &"ResolutionSettings",
-"language": &"GDScript",
-"path": "res://scripts/planet/settings/ResolutionSettings.gd"
-}, {
-"base": "Resource",
-"class": &"RidgeNoiseSettings",
-"language": &"GDScript",
-"path": "res://scripts/planet/settings/noise_settings/RidgeNoiseSettings.gd"
-}, {
-"base": "Resource",
-"class": &"ShadingDataModule",
-"language": &"GDScript",
-"path": "res://scripts/planet/shading/modules/ShadingDataModule.gd"
-}, {
-"base": "Node",
-"class": &"ShakeEffect",
-"language": &"GDScript",
-"path": "res://scripts/effects/ShakeEffect.gd"
-}, {
-"base": "Resource",
-"class": &"SimplexNoiseSettings",
-"language": &"GDScript",
-"path": "res://scripts/planet/settings/noise_settings/SimplexNoiseSettings.gd"
-}, {
-"base": "Node3D",
-"class": &"Stars",
-"language": &"GDScript",
-"path": "res://scripts/stars/Stars.gd"
-}]
-_global_script_class_icons={
-"AtmosphereEffect": "",
-"AtmosphereEntryExitMonitor": "",
-"AtmosphereSettings": "",
-"CelestialBodyGenerator": "",
-"CelestialBodySettings": "",
-"CelestialBodyShading": "",
-"CelestialBodyShape": "",
-"EarthColors": "",
-"EarthHeightModule": "",
-"EarthShading": "",
-"EarthShadingModule": "",
-"HeightModule": "",
-"LODParameter": "",
-"OceanEffect": "",
-"OceanSettings": "",
-"PerturbModule": "",
-"PerturbPointsModule": "",
-"PlanetEffectHolder": "",
-"PlanetEffects": "",
-"PlanetSphereMesh": "",
-"ResolutionSettings": "",
-"RidgeNoiseSettings": "",
-"ShadingDataModule": "",
-"ShakeEffect": "",
-"SimplexNoiseSettings": "",
-"Stars": ""
-}
-
 [application]
 
 config/name="Procedural Planet"
 run/main_scene="res://scenes/Main.tscn"
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
@@ -184,7 +24,6 @@ TestGlobals="*res://scripts/globals/test.gd"
 [debug]
 
 settings/stdout/print_fps=true
-gdscript/warnings/return_value_discarded=0
 gdscript/warnings/integer_division=0
 
 [display]
@@ -218,8 +57,8 @@ common/physics_interpolation=true
 lights_and_shadows/directional_shadow/size=2048
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
-environment/glow/use_high_quality=true
 occlusion_culling/use_occlusion_culling=true
 lights_and_shadows/positional_shadow/atlas_size=2048
 environment/defaults/default_environment="res://resources/GameEnvironment.tres"
+environment/glow/use_high_quality=true
 environment/default_environment="res://default_env.tres"

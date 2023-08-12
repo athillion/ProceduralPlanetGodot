@@ -1,8 +1,8 @@
-[gd_resource type="Resource" load_steps=5 format=3 uid="uid://c81covgcp35k5"]
+[gd_resource type="Resource" script_class="OceanSettings" load_steps=5 format=3 uid="uid://c81covgcp35k5"]
 
 [ext_resource type="Script" path="res://scripts/planet/settings/OceanSettings.gd" id="1_561w0"]
-[ext_resource type="Texture2D" uid="uid://bc8jt35p7okp2" path="res://materials/textures/water_foam.png" id="1_a2wmy"]
-[ext_resource type="Texture2D" uid="uid://8bljs0ddcdvu" path="res://materials/textures/Wave B.png" id="3_iaedc"]
+[ext_resource type="Texture2D" uid="uid://dtssp7aoyxwx2" path="res://materials/textures/water_foam.png" id="1_a2wmy"]
+[ext_resource type="Texture2D" uid="uid://be7g6dqny8yfi" path="res://materials/textures/Wave B.png" id="3_iaedc"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ex8b4"]
 

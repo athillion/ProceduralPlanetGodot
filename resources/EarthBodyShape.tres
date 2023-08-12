@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=11 format=3 uid="uid://c7kr5gdkvgcb"]
+[gd_resource type="Resource" script_class="CelestialBodyShape" load_steps=11 format=3 uid="uid://c7kr5gdkvgcb"]
 
 [ext_resource type="Script" path="res://scripts/planet/settings/noise_settings/SimplexNoiseSettings.gd" id="1_5xb5q"]
 [ext_resource type="Script" path="res://scripts/planet/shape/modules/EarthHeightModule.gd" id="1_foy8k"]
