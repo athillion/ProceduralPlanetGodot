@@ -5,6 +5,7 @@ render_mode unshaded, depth_draw_never, depth_prepass_alpha;
 #include "res://materials/shaders/include/Noise.gdshaderinc"
 
 uniform sampler2D MainTex;
+uniform sampler2D DEPTH_TEXTURE : hint_depth_texture, filter_linear_mipmap;
 
 uniform float ScreenWidth = 1280.0;
 uniform float ScreenHeight = 720.0;
