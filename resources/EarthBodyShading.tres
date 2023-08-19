@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=15 format=3 uid="uid://bwamv2xe41otf"]
+[gd_resource type="Resource" script_class="EarthShading" load_steps=15 format=3 uid="uid://bwamv2xe41otf"]
 
 [ext_resource type="Resource" uid="uid://ctd28v4t7vm2l" path="res://resources/EarthAtmosphereSettings.tres" id="1_fitxj"]
 [ext_resource type="Script" path="res://scripts/planet/shading/colors/EarthColors.gd" id="1_q4po3"]

@@ -1,47 +1,47 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://g31nb23b03kn"]
 
 [ext_resource type="Shader" path="res://materials/shaders/Earth.gdshader" id="1_02dij"]
-[ext_resource type="Texture2D" uid="uid://b32tyo4xagg1g" path="res://materials/textures/EarthNoise.png" id="2_qhhly"]
+[ext_resource type="Texture2D" uid="uid://bq4xycj0rtcgs" path="res://materials/textures/EarthNoise.png" id="2_qhhly"]
 
 [resource]
 render_priority = 5
 shader = ExtResource("1_02dij")
+shader_parameter/ShoreLow = Color(0.980392, 1, 0.666667, 1)
+shader_parameter/HeightMinMax = Vector2(0.88, 1.103)
+shader_parameter/OceanLevel = 1.0
 shader_parameter/BodyScale = 200.0
+shader_parameter/ShoreHigh = Color(0.952941, 0.905882, 0.380392, 1)
+shader_parameter/FlatLowA = Color(0.788235, 0.858824, 0, 1)
+shader_parameter/FlatHighA = Color(0.192157, 0.462745, 0, 1)
+shader_parameter/FlatLowB = Color(0.584314, 0.858824, 0, 1)
+shader_parameter/FlatHighB = Color(0.192157, 0.462745, 0, 1)
+shader_parameter/SteepLow = Color(0.529412, 0.490196, 0.188235, 1)
+shader_parameter/SteepHigh = Color(0.14902, 0.0666667, 0, 1)
 shader_parameter/FlatColBlend = 1.5
 shader_parameter/FlatColBlendNoise = 0.3
-shader_parameter/FlatHighA = Color(0.192157, 0.462745, 0, 1)
-shader_parameter/FlatHighB = Color(0.192157, 0.462745, 0, 1)
-shader_parameter/FlatLowA = Color(0.788235, 0.858824, 0, 1)
-shader_parameter/FlatLowB = Color(0.584314, 0.858824, 0, 1)
+shader_parameter/ShoreHeight = 0.058
+shader_parameter/ShoreBlend = 0.089
+shader_parameter/MaxFlatHeight = 0.791
+shader_parameter/SteepBands = 16.0
+shader_parameter/SteepBandStrength = 0.639
+shader_parameter/SteepnessThreshold = 0.711
 shader_parameter/FlatToSteepBlend = 0.177
 shader_parameter/FlatToSteepNoise = 0.128
-shader_parameter/FresnelCol = Color(0.964706, 1, 0.572549, 1)
-shader_parameter/FresnelPow = 12.0
-shader_parameter/FresnelStrengthFar = 1.0
-shader_parameter/FresnelStrengthNear = 2.0
-shader_parameter/Glossiness = 0.0
-shader_parameter/HeightMinMax = Vector2(0.88, 1.103)
-shader_parameter/MaxFlatHeight = 0.791
-shader_parameter/Metallic = 0.0
-shader_parameter/NoiseScale = 1.0
-shader_parameter/NoiseScale2 = 10.0
-shader_parameter/NoiseTex = ExtResource("2_qhhly")
-shader_parameter/OceanLevel = 1.0
-shader_parameter/ShoreBlend = 0.089
-shader_parameter/ShoreHeight = 0.058
-shader_parameter/ShoreHigh = Color(0.952941, 0.905882, 0.380392, 1)
-shader_parameter/ShoreLow = Color(0.980392, 1, 0.666667, 1)
-shader_parameter/SnowBlend = 0.067
-shader_parameter/SnowCol = Color(1, 1, 1, 1)
-shader_parameter/SnowHighlight = 1.2
 shader_parameter/SnowLongitude = 0.914
+shader_parameter/UseSnowyPoles = 0.0
+shader_parameter/SnowCol = Color(1, 1, 1, 1)
+shader_parameter/SnowBlend = 0.067
+shader_parameter/SnowHighlight = 1.2
 shader_parameter/SnowNoiseA = 3.0
 shader_parameter/SnowNoiseB = 2.87
 shader_parameter/SnowSpecular = 0.704
-shader_parameter/SteepBandStrength = 0.639
-shader_parameter/SteepBands = 16.0
-shader_parameter/SteepHigh = Color(0.14902, 0.0666667, 0, 1)
-shader_parameter/SteepLow = Color(0.529412, 0.490196, 0.188235, 1)
-shader_parameter/SteepnessThreshold = 0.711
+shader_parameter/NoiseScale = 1.0
+shader_parameter/NoiseScale2 = 10.0
+shader_parameter/FresnelCol = Color(0.964706, 1, 0.572549, 1)
+shader_parameter/FresnelStrengthNear = 2.0
+shader_parameter/FresnelStrengthFar = 1.0
+shader_parameter/FresnelPow = 12.0
+shader_parameter/Glossiness = 0.0
+shader_parameter/Metallic = 0.0
 shader_parameter/TestParams = Vector4(-0.36, -0.05, 0.38, 0)
-shader_parameter/UseSnowyPoles = 0.0
+shader_parameter/NoiseTex = ExtResource("2_qhhly")

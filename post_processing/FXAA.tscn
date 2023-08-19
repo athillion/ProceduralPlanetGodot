@@ -23,6 +23,8 @@ code = "shader_type canvas_item;
 // However if you use this, I am not liable for anything (positive or negative) that results from the use of this code.
 // But I shouldn't need to say this. I'm sure you're a cool person :)
 
+uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
+
 uniform float qualitySubpix = 1.0;
 uniform float qualityEdgeThreshold = 0.0;
 uniform float qualityEdgeThresholdMin = 0.0;
@@ -420,10 +422,10 @@ void fragment()
 
 [sub_resource type="ShaderMaterial" id="2"]
 shader = SubResource("1")
-shader_parameter/lumaScale = 6.0
+shader_parameter/qualitySubpix = 1.0
 shader_parameter/qualityEdgeThreshold = 0.063
 shader_parameter/qualityEdgeThresholdMin = 0.125
-shader_parameter/qualitySubpix = 1.0
+shader_parameter/lumaScale = 6.0
 
 [node name="FXAA" type="ColorRect"]
 material = SubResource("2")

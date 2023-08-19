@@ -58,7 +58,7 @@ class_name AtmosphereSettings
 		blue_noise_texture = val
 		on_data_changed()
 
-@onready var rng = RandomNumberGenerator.new()
+var rng = RandomNumberGenerator.new()
 
 var optical_depth_baked : bool = false
 @export var optical_depth_texture := ImageTexture.new()

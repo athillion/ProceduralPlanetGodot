@@ -9,6 +9,7 @@ render_mode unshaded, depth_draw_never, depth_prepass_alpha;
 #define R 1.1
 
 uniform sampler2D MainTex;
+uniform sampler2D DEPTH_TEXTURE : hint_depth_texture, filter_linear_mipmap;
 
 uniform float ZNear = 0.1;
 

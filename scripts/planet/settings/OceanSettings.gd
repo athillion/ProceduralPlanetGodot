@@ -103,7 +103,7 @@ class_name OceanSettings
 		refraction_scale = val
 		emit_signal("changed")
 
-@onready var rng = RandomNumberGenerator.new()
+var rng = RandomNumberGenerator.new()
 
 func on_data_changed():
 	emit_signal("changed")
